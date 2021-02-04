@@ -1,0 +1,126 @@
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #040404b5;
+    z-index: 130;
+}
+
+.modal-window {
+    // display: none;
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &-form {
+        width: 508px;
+        height: 530px;
+        background-image: url('../img/form-bg2.jpg');
+        background-size: cover;
+        position: relative;
+        &__title {
+            @include font($FDC,
+            20px,
+            25px);
+            margin: 0 auto 40px;
+            max-width: 297px;
+            text-align: center;
+            padding-top: 28px;
+        }
+        &-group {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            max-width: 408px;
+            text-align: left;
+            // justify-content: center;
+        }
+        input {
+            border: none;
+            outline: none;
+            background: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            height: 50px;
+            margin-bottom: 20px;
+            color: $white-color;
+        }
+        input::placeholder {
+            @include font($FBC,
+            18px,
+            25px);
+            color: $white-color;
+        }
+        input:focus {
+            &::placeholder {
+                color: transparent;
+            }
+        }
+        label {
+            @include font($FBC,
+            15px,
+            20px);
+            color: rgba(255, 255, 255, 0.5);
+        }
+        &__btn {
+            display: block;
+            // text-align: center;
+            padding: 19px 21px;
+            margin-left: auto;
+            margin-right: 49px;
+            margin-top: 15px;
+            margin-bottom: 27px;
+            &:hover {
+                background-color: darken($accent-color, 10%);
+            }
+        }
+        .modal-label-permition {
+            @include font($FBC,
+            16px,
+            22px);
+            color: $white-color;
+            position: relative;
+            padding-left: 25px;
+            display: inline-block;
+            left: 12%;
+            &:before {
+                content: "";
+                display: block;
+                width: 18px;
+                height: 18px;
+                background-color: $accent-color;
+                border: 1px solid $font-color_2;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+            &:after {
+                content: "\f00c";
+                @include font($ICO,
+                15px,
+                18px);
+                color: $white-color;
+                display: block;
+                opacity: 0;
+                position: absolute;
+                top: 1px;
+                left: 3px;
+                z-index: 2;
+            }
+        }
+        .modal-permition-checkbox {
+            position: absolute;
+            appearance: none;
+            &:checked {
+                &+.modal-label-permition {
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

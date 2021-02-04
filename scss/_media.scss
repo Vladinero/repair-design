@@ -1,0 +1,169 @@
+            @media (max-width: 1300px) {
+                .header {
+                    &-top {
+                        display: grid;
+                        grid-template-columns: 1fr 2fr 1fr;
+                        grid-template-rows: 1fr 1fr;
+                        grid-template-areas: "logo nav phone" ". btn .";
+                        justify-items: center;
+                    }
+                    &-logo {
+                        grid-area: logo;
+                    }
+                    &-nav {
+                        grid-area: nav;
+                    }
+                    &-phone {
+                        grid-area: phone;
+                    }
+                    &-top__btn {
+                        grid-area: btn;
+                    }
+                }
+            }
+            
+            @media (max-width: 1040px) {
+                .header {
+                    &-top {
+                        grid-template-areas: "logo nav nav" ". phone btn";
+                    }
+                }
+            }
+            
+            @media (max-width: 840px) {
+                .header {
+                    &-top {
+                        grid-template-columns: 1fr 1fr 1fr;
+                        grid-template-areas: "logo phone btn" "nav nav nav";
+                    }
+                    &-logo {
+                        margin-left: 15px;
+                        margin-right: auto;
+                    }
+                    &-info {
+                        padding-top: 100px;
+                    }
+                    &-btns {
+                        margin-bottom: 144px;
+                    }
+                }
+            }
+            
+            // @media (min-width: 640px) {
+            //     &-top {
+            //         .mob__btn_active {
+            //             display: none!important;
+            //             }
+            //     }
+            // }
+            @media (max-width: 640px) {
+                .header {
+                    &-top {
+                        grid-template-columns: 1fr 1fr 1fr 1fr;
+                        grid-template-areas: "logo logo . mobnav" "phone phone btn btn";
+                        .mob-nav-outer {
+                            display: block;
+                        }
+                    }
+                    &-logo {
+                        margin-left: 15px;
+                        margin-right: auto;
+                    }
+                    &-nav {
+                        display: none;
+                        position: absolute;
+                        top: 130px;
+                        display: none;
+                        width: 100%;
+                        height: 100vh;
+                        background-image: url('../img/form-bg2.jpg');
+                        padding: 15px;
+                        &__items {
+                            text-align: center;
+                            list-style: none;
+                            padding-bottom: 20px;
+                            height: 100vh;
+                            flex-direction: column;
+                            align-items: center;
+                        }
+                        &__item {
+                            padding: 10px 0;
+                            margin-left: 0!important;
+                        }
+                        &__item a {
+                            @include font($FBC,
+                            14px,
+                            16px);
+                            color: $white-color;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            transition: 0.5s;
+                        }
+                        &__item a:hover {
+                            color: $accent-color;
+                        }
+                    }
+                    .mob-nav-outer {
+                        grid-area: mobnav;
+                    }
+                    &-info {
+                        padding-right: 15px;
+                        padding-left: 15px;
+                        padding-top: 80px;
+                    }
+                    &-btns {
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 110px;
+                    }
+                    &-btns {
+                        .header__btn {
+                            padding: 20px;
+                        }
+                        .header__btn+.header__btn {
+                            margin-left: 0;
+                            margin-top: 10px;
+                        }
+                    }
+                    &-title {
+                        font-size: 30px;
+                        line-height: 40px;
+                        text-align: center;
+                    }
+                    &-descr {
+                        font-size: 14px;
+                        text-align: center;
+                    }
+                }
+            }
+            
+            @media (max-width: 450px) {
+                .header {
+                    &-top {
+                        grid-template-columns: 1fr 1fr 1fr 1fr;
+                        grid-template-areas: "logo logo logo mobnav" ". phone phone .";
+                        .show-menu {
+                            display: none!important;
+                        }
+                    }
+                    &-logo {
+                        margin-left: 15px;
+                        margin-right: auto;
+                    }
+                    &-nav {
+                        display: none;
+                    }
+                    .mob-nav-outer {
+                        grid-area: mobnav;
+                    }
+                    &-top__btn {
+                        display: none;
+                    }
+                    &-phone {
+                        padding: 13px 0;
+                    }
+                    &-title {
+                        font-size: 24px;
+                    }
+                }
+            }

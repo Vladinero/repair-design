@@ -1,0 +1,247 @@
+.typesOfRepair {
+    padding-top: 770px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    // height: 2000px;
+    &-wrapper {
+        max-width: 1236px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    &-title {
+        @include font($YO, 20px, 28px);
+        text-transform: uppercase;
+        color: $font-color_2;
+        margin-bottom: 13px;
+    }
+    &__icon {
+        margin-bottom: 30px;
+    }
+    &-items {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 421px;
+        margin-bottom: 311px;
+    }
+    &__item {
+        max-width: 392px;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    &__descr {
+        position: relative;
+        width: 330px;
+        margin: 294px 30px 0;
+        background-color: $white-color;
+        padding-left: 34px;
+        text-align: left;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+        &-title {
+            @include font($YO, 18px, 25px);
+            color: $font-color-1;
+            padding-top: 25px;
+            margin-bottom: 13px;
+        }
+        &-features {
+            @include font($FBC, 15px, 25px);
+            color: $font-color-3;
+            list-style-type: disc;
+            list-style-position: inside;
+            padding-bottom: 50px;
+        }
+    }
+    &__price {
+        position: absolute;
+        bottom: -27px;
+        left: 0;
+        @include font($YO, 18px, 25px);
+        text-transform: uppercase;
+        color: $white-color;
+        text-align: center;
+        background-color: $accent-color;
+        width: 228px;
+        // height: 54px;
+        padding: 17px 21px;
+    }
+}
+
+.services {
+    display: flex;
+    justify-content: space-between;
+    &-items {
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 730px;
+        height: 691px;
+        padding-top: 311px;
+        position: relative;
+        left: -100px;
+        margin-bottom: 242px;
+    }
+    &-item {
+        width: 42px;
+        height: 42px;
+        border-radius: 50px;
+        background-color: $accent-color;
+        position: absolute;
+        @include font($YO, 18px, 42px);
+        text-transform: uppercase;
+        text-align: center;
+        box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
+        overflow: visible;
+        &__descr {
+            position: absolute;
+            @include font($FMC, 18px, 21px);
+            font-family: FuturaMediumC;
+            color: $font-color-1;
+            padding-left: 30px;
+            width: 364px;
+            text-align: left;
+            text-transform: none;
+        }
+    }
+    &-item-1 {
+        top: 120px;
+        left: 353px;
+    }
+    &-item-2 {
+        top: 229px;
+        left: 430px;
+    }
+    &-item-3 {
+        top: 389px;
+        left: 454px;
+    }
+    &-item-4 {
+        bottom: 97px;
+        left: 388px;
+    }
+    &-form {
+        margin-top: 105px;
+        width: 508px;
+        height: 503px;
+        background-image: url('../img/form-bg2.jpg');
+        background-size: cover;
+        position: relative;
+        &__title {
+            @include font($FDC,
+            20px,
+            25px);
+            margin: 28px auto 40px;
+            max-width: 297px;
+        }
+        &-group {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            max-width: 408px;
+            text-align: left;
+            // justify-content: center;
+        }
+        input {
+            border: none;
+            outline: none;
+            background: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            height: 50px;
+            margin-bottom: 20px;
+            color: $white-color;
+        }
+        input::placeholder {
+            @include font($FBC,
+            18px,
+            25px);
+            color: $white-color;
+        }
+        input:focus {
+            &::placeholder {
+                color: transparent;
+            }
+        }
+        label {
+            @include font($FBC,
+            15px,
+            20px);
+            color: rgba(255, 255, 255, 0.5);
+        }
+        &__btn {
+            display: block;
+            // text-align: center;
+            padding: 19px 21px;
+            margin-left: auto;
+            margin-right: 49px;
+            margin-top: 15px;
+            &:hover {
+                background-color: darken($accent-color, 10%);
+            }
+        }
+        .services-label-permition {
+            @include font($FBC,
+            16px,
+            22px);
+            color: $white-color;
+            position: relative;
+            padding-left: 25px;
+            &:before {
+                content: "";
+                display: block;
+                width: 18px;
+                height: 18px;
+                background-color: $accent-color;
+                border: 1px solid $font-color_2;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+            &:after {
+                content: "\f00c";
+                @include font($ICO,
+                15px,
+                18px);
+                color: $white-color;
+                display: block;
+                opacity: 0;
+                position: absolute;
+                top: 1px;
+                left: 3px;
+                z-index: 2;
+            }
+        }
+        .services-permition-checkbox {
+            position: absolute;
+            appearance: none;
+            &:checked {
+                &+.services-label-permition {
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .saveMoney__icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background-color: $accent-color;
+            position: absolute;
+            bottom: -110px;
+            left: 0;
+            line-height: 72px;
+        }
+        .saveMoney__discr {
+            @include font($FDC,
+            20px,
+            25px);
+            color: $accent-color;
+            text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+            position: absolute;
+            bottom: -110px;
+            left: 100px;
+            max-width: 344px;
+            text-align: left;
+        }
+    }
+}

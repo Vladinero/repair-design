@@ -1,0 +1,28 @@
+.design-project {
+    padding-bottom: 154px;
+    background-color: $white-color;
+    height: 620px;
+    &__wrapper {
+        max-width: 1236px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    &__title {
+        @include font($YO, 20px, 28px);
+        text-transform: uppercase;
+        color: $font-color_2;
+        padding-top: 130px;
+        margin-bottom: 13px;
+    }
+    &__icon {
+        margin-bottom: 24px;
+    }
+    &__descr {
+        @include font($FBC, 20px, 27px);
+        color: $font-color_1;
+        max-width: 763px;
+        margin: 0 auto 39px;
+    }
+    }
+    
+

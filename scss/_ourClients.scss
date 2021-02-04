@@ -1,0 +1,113 @@
+.our-clients {
+    background: url('../img/typesOfRepair-bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__wrapper {
+        width: 1236px;
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 355px;
+    }
+    &__title {
+        padding-top: 526px;
+        @include font($YO,
+        20px,
+        28px);
+        text-transform: uppercase;
+        color: $font-color_2;
+        margin-bottom: 13px;
+        // margin-top: 90px;
+    }
+    &__icon {
+        margin-bottom: 24px;
+    }
+    &__descr {
+        @include font($FBC,
+        20px,
+        27px);
+        text-align: center;
+        color: $font-color_1;
+        max-width: 476px;
+        margin: 0 auto 63px;
+    }
+    &__rewiews {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__rewiew {
+        position: relative;
+        text-align: left;
+        flex-basis: 33.33%;
+        max-width: 376px;
+        background-color: $white-color;
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+        // padding-left: 20px;
+        // padding-top: 24px;
+        // padding-right: 32px;
+        padding: 24px 32px 85px 20px;
+    }
+    &__photo-name {
+        display: flex;
+        align-items: center;
+    }
+    &__photo,
+    &__name {
+        display: inline-block;
+        margin-bottom: 22px;
+    }
+    &__photo {
+        width: 76px;
+        height: 76px;
+        border-radius: 50%;
+        margin-right: 23px;
+    }
+    &__name {
+        @include font($YO,
+        18px,
+        23px);
+        color: $font-color_2;
+        width: 178px;
+    }
+    &__text {
+        @include font($FBC,
+        15px,
+        27px);
+        color: $font-color_3;
+    }
+    &__params {
+        position: absolute;
+        bottom: -27px;
+        left: 0;
+        width: 294px;
+        height: 54px;
+        background-color: $accent-color;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &__square {
+        // border-right: 1px solid $white-color;
+        // padding-right: 30px;
+        text-align: center;
+        position: relative;
+        &:after {
+            content: "";
+            width: 1px;
+            height: 54px;
+            display: block;
+            background-color: $white-color;
+            position: absolute;
+            left: 115px;
+            top: -10px;
+        }
+    }
+    .square__size,
+    .period__size {
+        @include font($YO,
+        17px,
+        24px);
+        text-transform: uppercase;
+        padding-left: 16px;
+    }
+}

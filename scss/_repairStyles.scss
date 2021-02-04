@@ -1,0 +1,97 @@
+.repair-styles {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: overlay;
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__descr {
+        max-width: 411px;
+        margin-left: 100px;
+        // text-align: left;
+    }
+    &__title {
+        @include font($YO, 27px, 37px);
+        text-transform: uppercase;
+        color: $accent-color;
+        margin: 137px 0 47px;
+    }
+    &__items {
+        @include font($PRN, 20px, 34px);
+        font-family: Proxima Nova;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 100px;
+        li {
+            padding: 4px 0;
+            &>div {
+                transition: color 0.5s;
+                border-bottom: 1px solid transparent;
+                &:hover {
+                    // display: inline-block;
+                    color: $accent-color;
+                    // border-bottom: 1px solid $accent-color!important;
+                    cursor: pointer;
+                }
+            }
+        }
+        li+li {
+            margin-top: 5px;
+        }
+    }
+    &__photos {
+        width: 750px;
+    }
+    &__photo {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        &-left,
+        &-right {
+            width: 354px;
+            height: 950px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: absolute;
+            img {
+                object-fit: cover;
+            }
+        }
+        &-left {
+            top: -40px;
+            left: -110px;
+
+        }
+        &-right {
+            right: 102px;
+            top: -110px;
+        }
+    }
+    &__image1 {
+        width: 354px;
+        height: 557px;
+    }
+    &__image2 {
+        width: 354px;
+        height: 350px;
+    }
+    &__image3 {
+        width: 354px;
+        height: 275px;
+    }
+    &__image4 {
+        width: 354px;
+        height: 625px;
+    }
+}
+
+.active-style {
+    display: inline-block;
+    color: $accent-color;
+    border-bottom: 1px solid $accent-color!important;
+}

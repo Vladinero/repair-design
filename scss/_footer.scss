@@ -1,0 +1,236 @@
+.footer {
+    background: linear-gradient(180deg, rgba(24, 24, 24, 0.9) 3.47%, rgba(24, 24, 24, 0.72) 100%), url('../img/footer-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    &__wrapper {
+        width: 100%;
+        position: relative;
+    }
+    &-form {
+        // margin-top: 105px;
+        width: 883px;
+        // height: 503px;
+        background-image: url('../img/form-bg2.jpg');
+        background-size: cover;
+        position: absolute;
+        top: -225px;
+        // margin: 0 auto;
+        text-align: center;
+        padding-top: 35px;
+        left: 50%;
+        transform: translateX(-50%);
+        &__title {
+            @include font($FDC,
+            20px,
+            25px);
+            margin: 0 auto 40px;
+            max-width: 297px;
+        }
+        &-group {
+            display: flex;
+            // flex-direction: column;
+            margin: 0 auto;
+            // max-width: 408px;
+            // text-align: left;
+            justify-content: space-between;
+            max-width: 520px;
+        }
+        .form-name {
+            width: 100%;
+        }
+        .question-label {
+            max-width: 520px;
+        }
+        .question-field {
+            margin: 0 auto 27px;
+            max-width: 520px;
+        }
+        input {
+            border: none;
+            outline: none;
+            background: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            height: 30px;
+            margin-bottom: 20px;
+            color: $white-color;
+        }
+        input::placeholder {
+            @include font($FBC,
+            18px,
+            25px);
+            color: $white-color;
+        }
+        input:focus {
+            &::placeholder {
+                color: transparent;
+            }
+        }
+        label {
+            display: block;
+            text-align: left;
+            @include font($FBC,
+            15px,
+            20px);
+            color: rgba(255, 255, 255, 0.5);
+        }
+        &__btn {
+            display: block;
+            // text-align: center;
+            padding: 20px 54px;
+            // margin-left: auto;
+            // margin-right: 49px;
+            margin: 0 auto 35px;
+            &:hover {
+                background-color: darken($accent-color, 10%);
+            }
+        }
+        .footer-label-permition {
+            @include font($FBC,
+            16px,
+            22px);
+            color: $white-color;
+            position: relative;
+            padding-left: 25px;
+            display: inline-block;
+            margin-bottom: 50px;
+            &:before {
+                content: "";
+                display: block;
+                width: 18px;
+                height: 18px;
+                background-color: $accent-color;
+                border: 1px solid $font-color_2;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+            &:after {
+                content: "\f00c";
+                @include font($ICO,
+                15px,
+                18px);
+                color: $white-color;
+                display: block;
+                opacity: 0;
+                position: absolute;
+                top: 1px;
+                left: 3px;
+                z-index: 2;
+            }
+        }
+        .footer-permition-checkbox {
+            position: absolute;
+            appearance: none;
+            &:checked {
+                &+.footer-label-permition {
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    &__adress {
+        @include font($YO,
+        20px,
+        28px);
+        color: $accent-color;
+        text-align: center;
+        text-transform: uppercase;
+        max-width: 589px;
+        margin: 0 auto 26px;
+        padding-top: 275px;
+    }
+    &__icons {
+        max-width: 71px;
+        margin: 0 auto 43px;
+    }
+    &__icon {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background-color: $accent-color;
+        display: inline-block;
+        line-height: 24px;
+        text-align: center;
+        &:first-child {
+            margin-right: 11px;
+        }
+    }
+    &__map {
+        width: 925px;
+        height: 465px;
+        margin: 0 auto 66px;
+    }
+    &-top {
+        background-color: $bg-color;
+        position: relative;
+        padding: 23px 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // max-width: 1256px;
+        // margin: 0 auto;
+        width: 100%;
+    }
+    &-logo {
+        a {
+            @include font($FDC,
+            14px,
+            16px);
+            color: $accent-color;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+    &-phone {
+        a {
+            @include font($FDC,
+            14px,
+            16px);
+            color: $accent-color;
+            text-decoration: none;
+            border-bottom: 1px solid $accent-color;
+            text-transform: uppercase;
+        }
+    }
+    &-nav {
+        color: $white-color;
+        @include font($FBC,
+        14px,
+        16px);
+        &__items {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+        &__item {
+            &+.footer-nav__item {
+                margin-left: 47px;
+            }
+            &:hover {
+                a {
+                    color: $accent-color;
+                    cursor: pointer;
+                }
+            }
+            a {
+                color: $white-color;
+                text-decoration: none;
+                text-transform: uppercase;
+                outline: none;
+                transition: all 0.5s;
+            }
+        }
+    }
+    &-top__btn {
+        padding: 13px 33px;
+        transition: all 0.5s;
+        &:hover {
+            background-color: darken($accent-color, 10%);
+        }
+    }
+}

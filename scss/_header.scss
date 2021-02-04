@@ -1,0 +1,266 @@
+            .header {
+                background-color: $bg-color;
+                position: relative;
+                &-top {
+                    padding: 23px 0;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    max-width: 1256px;
+                    margin: 0 auto;
+                }
+                &-logo {
+                    a {
+                        @include font($FDC, 14px, 16px);
+                        color: $accent-color;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        outline: none;
+                    }
+                }
+                &-phone {
+                    a {
+                        @include font($FDC, 14px, 16px);
+                        color: $accent-color;
+                        text-decoration: none;
+                        border-bottom: 1px solid $accent-color;
+                        text-transform: uppercase;
+                    }
+                }
+                &-top {
+                    position: relative;
+                    // .mob-nav {
+                    //     position: absolute;
+                    //     top: 130px;
+                    //     display: none;
+                    //     width: 100%;
+                    //     height: 100vh;
+                    //     background-image: url('../img/form-bg2.jpg');
+                    //     padding: 15px;
+                    // }
+                    .show-menu {
+                        display: flex;
+                        flex-direction: column!important;
+                    }
+                    .mob-nav-outer {
+                        display: none;
+                    }
+                    .mob__btn {
+                        color: $white-color;
+                        margin-left: auto;
+                        width: 20px;
+                        height: 20px;
+                        cursor: pointer;
+                        display: block;
+                        position: relative;
+                        outline: none;
+                        span {
+                            position: absolute;
+                            top: 50%;
+                            margin-top: -1px;
+                            width: 100%;
+                            height: 2px;
+                            display: block;
+                            background-color: $white-color;
+                            &::before,
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                width: 20px;
+                                height: 2px;
+                                display: block;
+                                background-color: $white-color;
+                                transition: 0.2s;
+                            }
+                            &::before {
+                                transform: translateY(-7px);
+                            }
+                            &::after {
+                                transform: translateY(7px);
+                            }
+                        }
+                        &_active {
+                            // display: block;
+                            span {
+                                height: 0;
+                                &:before {
+                                    transform: rotate(-45deg);
+                                    transform-origin: center;
+                                }
+                                &:after {
+                                    transform: rotate(45deg);
+                                    transform-origin: center;
+                                }
+                            }
+                        }
+                    }
+                    //     .mob-nav__items {
+                    //         text-align: center;
+                    //         list-style: none;
+                    //         padding-bottom: 20px;
+                    //     }
+                    //     .mob-nav__item {
+                    //         padding: 23px 0;
+                    //     }
+                    //     .mob-nav__item a {
+                    //         @include font($FBC,
+                    //         14px,
+                    //         16px);
+                    //         color: $white-color;
+                    //         text-decoration: none;
+                    //         text-transform: uppercase;
+                    //         transition: 0.5s;
+                    //     }
+                    //     .mob-nav__item a:hover {
+                    //         color: $accent-color;
+                    //     }
+                }
+                &-nav {
+                    color: $white-color;
+                    @include font($FBC, 14px, 16px);
+                    text-transform: uppercase;
+                    &__items {
+                        list-style: none;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    &__item {
+                        &+.header-nav__item {
+                            margin-left: 47px;
+                        }
+                        &:hover {
+                            a {
+                                color: $accent-color;
+                                cursor: pointer;
+                            }
+                        }
+                        a {
+                            color: $white-color;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            outline: none;
+                            transition: all 0.5s;
+                        }
+                    }
+                }
+                &-top__btn {
+                    padding: 13px 33px;
+                    transition: all 0.5s;
+                    &:hover {
+                        background-color: darken($accent-color, 10%);
+                        cursor: pointer;
+                    }
+                }
+                &-content {
+                    display: flex;
+                    // justify-content: center;
+                    align-items: center;
+                }
+                &-aside {
+                    @include font($FDC, 14px, 16px);
+                    background-color: $bg-color;
+                    width: 82px;
+                    flex-shrink: 0;
+                    margin-left: auto;
+                    p {
+                        transform: rotate(90deg);
+                        position: relative;
+                        a {
+                            color: $accent-color;
+                            text-transform: uppercase;
+                            text-decoration: none;
+                            outline: none;
+                        }
+                        &:before {
+                            content: "";
+                            width: 50px;
+                            height: 1px;
+                            background-color: $accent-color;
+                            display: block;
+                            position: absolute;
+                            top: 50%;
+                            left: 110%;
+                        }
+                    }
+                }
+                &-info {
+                    flex-grow: 1;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    width: 100%;
+                    max-width: 1358px;
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 60px;
+                    padding-top: 182px;
+                    background: rgba(0, 0, 0, 0.7);
+                    background-repeat: no-repeat;
+                    background-blend-mode: overlay;
+                }
+                &-title {
+                    color: $white-color;
+                    font-family: Yeseva One;
+                    font-size: 40px;
+                    line-height: 53px;
+                    text-transform: uppercase;
+                    max-width: 515px;
+                    margin-bottom: 25px;
+                }
+                &-descr {
+                    @include font($FBC, 22px, 30px);
+                    color: $white-color;
+                    max-width: 500px;
+                    margin-bottom: 41px;
+                }
+                &-btns {
+                    margin-bottom: 208px;
+                    .header__btn {
+                        padding: 20px 41px;
+                        transition: all 0.5s;
+                        &+.header__btn {
+                            margin-left: 20px;
+                        }
+                        &:hover {
+                            background-color: darken($accent-color, 10%);
+                        }
+                    }
+                }
+                &-bottom__btn {
+                    position: absolute;
+                    left: 0;
+                    bottom: -5%;
+                    z-index: 10;
+                    width: 247px;
+                    height: 97px;
+                    background-color: $bg-color;
+                    color: $white-color;
+                    border: none;
+                    outline: 0 !important;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    outline: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    @include font($YO, 14px, 19px);
+                    &::after {
+                        content: '';
+                        display: inline-block;
+                        color: $accent-color;
+                        margin-left: 12px;
+                        width: 20px;
+                        height: 20px;
+                        border: 1px solid $accent-color;
+                        border-radius: 50%;
+                    }
+                    &::before {
+                        position: absolute;
+                        content: '\f107';
+                        font-family: 'icomoon';
+                        color: $accent-color;
+                        top: 41%;
+                        left: 79%;
+                        z-index: 5;
+                    }
+                }
+            }

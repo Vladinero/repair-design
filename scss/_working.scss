@@ -1,0 +1,157 @@
+.working {
+    background-image: url('../img/working-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 1615px;
+    &__wrapper {
+        max-width: 1238px;
+        margin: 0 auto;
+    }
+    &-top__wrapper {
+        // display: flex;
+        // justify-content: space-between;
+        padding-top: 428px;
+        position: relative;
+        width: 100%;
+    }
+    // &__suptitle-title {
+    //     // padding-top: 428px;
+    // }
+    &__suptitle {
+        @include font($FDC,
+        15px,
+        21px);
+        text-transform: uppercase;
+        color: $white-color;
+        margin-bottom: 18px;
+    }
+    &__title {
+        @include font($YO,
+        27px,
+        37px);
+        text-transform: uppercase;
+        color: $accent-color;
+        position: relative;
+        max-width: 200px;
+        margin-bottom: 130px;
+        &:after {
+            content: "";
+            width: 92px;
+            height: 1px;
+            display: block;
+            background-color: #E3B873;
+            position: absolute;
+            right: -110px;
+            bottom: 20px
+        }
+    }
+    &__slider-counter {
+        @include font($YO,
+        18px,
+        25px);
+        text-transform: uppercase;
+        margin-bottom: 22px;
+    }
+    &__topSlider {
+        position: absolute;
+        top: 440px;
+        right: -202px;
+        max-width: 964px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        color: $font-color_1;
+    }
+    &-topSlider-item {
+        // max-width: 127px;
+        height: 71px;
+        flex-basis: 33.33333%;
+        margin-bottom: 36px;
+    }
+    &-topSlider-number {
+        @include font($YO,
+        15px,
+        21px);
+        text-transform: uppercase;
+        padding-bottom: 4px;
+        margin-bottom: 12px;
+        margin-top: 60px;
+        display: inline-block;
+        cursor: pointer;
+    }
+    &-topSlider-title {
+        @include font($FBC,
+        15px,
+        18px);
+        max-width: 127px;
+    }
+    &-topSlider-item-active div {
+        color: $white-color;
+        &:first-child {
+            border-bottom: 1px solid $accent-color;
+        }
+    }
+    &__mainSlider-item {
+        display: flex!important;
+        justify-content: space-between;
+        // margin-top: 110px;
+    }
+    &__mainSlider-title {
+        @include font($YO,
+        15px,
+        23px);
+        text-transform: uppercase;
+        color: $accent-color;
+        max-width: 262px;
+        margin-bottom: 16px;
+    }
+    &__mainSlider-descr {
+        @include font($FBC,
+        15px,
+        25px);
+        max-width: 337px;
+    }
+    &__mainSlider-img {
+        margin-right: 2px;
+    }
+    &__mainSlider-arrows {
+        position: absolute;
+        bottom: 0;
+        z-index: 3;
+        cursor: pointer;
+    }
+    &__mainSlider-arrowLeft {
+        left: 0;
+        // bottom: 0;
+    }
+    &__mainSlider-arrowRight {
+        left: 251px;
+        // bottom: 0;
+    }
+    &__mainSlider-dots {
+        display: flex;
+        position: absolute;
+        left: 72px;
+        bottom: 0;
+        li {
+            &+li {
+                margin-left: 18px;
+            }
+            &.slick-active>button {
+                background-color: $white-color;
+            }
+            button {
+                border: none;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                font-size: 0;
+                background: rgba(255, 255, 255, 0.3);
+                padding: 0;
+            }
+        }
+    }
+}

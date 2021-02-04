@@ -1,0 +1,24 @@
+ // body {
+ //     // font-family: 'FuturaDemiC';
+ //     // font-style: italic;
+ //     // font-family: 'Yeseva One';
+ //     // @include font($FDC, 24, bold, 1.2);
+ // }
+ * {
+     box-sizing: border-box;
+ }
+ 
+ //  html {
+ //      overflow-y: scroll;
+ //  }
+ body {
+     background-color: $back-color;
+     color: $white-color;
+ }
+ 
+ .site-wrapper {
+     max-width: 1437px; //нужно 1440px
+     width: 100%;
+     margin: 0 auto;
+     position: relative;
+ }
